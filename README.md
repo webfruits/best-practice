@@ -9,18 +9,18 @@ This document provides some basic recommendations about how to code and structur
 BTW: To keep things simple and understandable in its codebase is one of the main reasons for developing webfruits. Mostly every major UI library or framework is huge in its codebase. Try to ask yourself if you or your team really need that kind of big „middleware“ between you and the DOM. Keep in mind, that the DOM itself is already a high level UI-API.
 
 ## Use TypeScript
-[TypeScript](https://basarat.gitbooks.io/typescript/docs/why-typescript.html) will help you a lot and finally increase your productivity and code quality. With TypeScript you can easily navigate through your whole codebase and it prevents you making mistakes during writing the code. It forces you to write better code. Feel interested to read this inofficial [TypeScript StyleGuide and Coding Conventions](https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md#variable-and-function).
+[TypeScript](https://basarat.gitbooks.io/typescript/docs/why-typescript.html) will help you a lot and finally increase your productivity and code quality. With TypeScript you can easily navigate through your whole codebase and it prevents you making mistakes during writing code. It forces you to write better code. Feel interested to read this inofficial [TypeScript StyleGuide and Coding Conventions](https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md#variable-and-function).
 
 ## Use Classes
 - **Write one class per file only.** With TypeScript it is getting really easy to write classes and to extend classes. 
 
-- **Structure you implementation.** You'll find a [skeleton class](./classes/SkeletonClass.ts) in this repository, which provides comment blocks for `Properties`, `Constructor`, `Public Methodes`, `Private Methodes` and `Events`. If you like, use this `SkeletonClass.ts` to structure you implementation for this class. 
+- **Structure you implementation.** You'll find a [skeleton class](./classes/SkeletonClass.ts) in this repository, which provides comment blocks for `Properties`, `Constructor`, `Public Methodes`, `Private Methodes` and `Events`. If you like, use this `SkeletonClass.ts` to structure you implementation for a class. 
 
 - **Keep any property or methode `private`** unless you need it `public` which then becomes a class API.
 
 - **Prefix `private properties` with an underscore.** Do not change properties directly. Use getters and setters instead. Using getters and setters allowes you to react when a property has changed.
 
-## Project structure
+## Project folder and file structure
 
 ```
 src
@@ -29,9 +29,9 @@ src
         icons
         fonts
         ...
-    html | pub | hbs
+    html
     libs
-    css | scss
+    scss
     ts
         config
             AppConfig.ts
