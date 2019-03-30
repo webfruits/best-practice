@@ -68,3 +68,18 @@ src
                 ...   
 
 ```
+
+## more webfruits
+
+- **[webfruits/core](https://github.com/webfruits/core)**  
+a TypeScript library for building user interfaces using the real DOM.
+
+- **[webfruits/toolbox](https://github.com/webfruits/toolbox)**  
+provides additional features like SVGComponent, GridLayout and a lot of utilities.
+
+- **[webfruits/webpack-starterkit](https://github.com/webfruits/webpack-starterkit)**  
+is a basic webpack setup and skeleton for an webfruits application.
+
+
+## Licence
+webfruits/best-pratice is [MIT licensed](./LICENSE).
