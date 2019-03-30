@@ -1,7 +1,7 @@
 <img src="https://webfruits.io/assets/wf-small-bestpractice-logo.svg" alt="wf core logo" height="50px">
 
 # webfruits/bestpractice &nbsp;
-This document provides some recommendations about how to structure a webapp with [webfruits](https://github.com/webfruits).  
+This document provides some basic recommendations about how to code and structure a webapp with [webfruits](https://github.com/webfruits).  
 
 ## The golden rule
 [Write self explaining and readable code](https://medium.com/@webseanhickey/the-evolution-of-a-software-engineer-db854689243). Always try to find a solution that even a beginner can understand (and yourself one month later). If you do so you can avoid comments, which takes time to write and a lot of attention to keep in sync with your code.
