@@ -69,7 +69,7 @@ app-name/
 - **`components/`** every ui component will find its place in this folder. 
 - **`style/`** location for all global style definitions
 - **`AppNameMain.ts`** this is the place to initialize all core modules.
-- most likly there will be more folders depending on your app.
+- most likely there will be more folders depending on your app.
 
 ### `ts/app-name/core/`
 ```
@@ -111,7 +111,7 @@ components/
     ...    
 ```
 This is just an example of how to structure you components. There is only one recommendations:
-- **Use a folder for every component**. Even when a component itself is made only from one file. If you need additional classes or subcomponents that a specific to one component, put it in the same folder.
+- **Use a folder for every component**. Even when a component itself is made only from one file. If you need additional classes or subcomponents that are specific to one component, put it in the same folder.
 
 
 ### `ts/app-name/style/`
@@ -122,11 +122,11 @@ style/
     Color.ts
     ...
 ```
-All global styles should be implemented in specific classes with static getters or properties. The advantage of using  getters is, that the values can be calculated dynamically. For example the value for a headlines fontsize depends from the current width of the app.  
+All global styles should be implemented in specific classes with static getters or properties. The advantage of using  getters is, that the values can be calculated dynamically. For example the value for a headlines fontsize could depends to current width of the app.  
 Because in [webfruits/core](https://github.com/webfruits/core) styles are defined via TypeScript, this styles can be used across your whole codebase.
 
-### Example: SkeletonApp
-The [skeleton-app](./skeleton-app) demonstrates, how the structure could look like on a webapp that uses a service to catch the data for a gallery, which can be controlled by a navigation. It features only this kind of implementation that is needed to get the idea.
+## Example: SkeletonApp
+The [skeleton-app](./skeleton-app) demonstrates, how the structure could look like on a webapp that uses a service to catch the data for a gallery, which can be controlled by a navigation.
 
 ## more webfruits
 
