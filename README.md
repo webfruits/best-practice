@@ -12,7 +12,7 @@ _BTW: To keep things simple and understandable in its codebase is one of the mai
 [TypeScript](https://basarat.gitbooks.io/typescript/docs/why-typescript.html) will help you a lot and finally increase your productivity and code quality. With TypeScript you can easily navigate through your whole codebase and it prevents you making mistakes during writing code. It forces you to write better code. Feel free to read this inofficial [TypeScript StyleGuide and Coding Conventions](https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md#variable-and-function).
 
 ## Use Classes
-- **Write one class per file only.** With TypeScript it is getting really easy to write classes and to extend classes. 
+- **Write one class per file only.** It's a common paradigm and makes it much easier to read and understand your codebase.
 
 - **Structure you implementation.** You'll find a [skeleton class](./skeleton-class/SkeletonClass.ts) in this repository, which provides comment blocks for `Properties`, `Constructor`, `Public Methodes`, `Private Methodes` and `Events`. If you like, use this `SkeletonClass.ts` to structure you implementation for a class. 
 
@@ -20,7 +20,7 @@ _BTW: To keep things simple and understandable in its codebase is one of the mai
 
 - **Prefix `private properties` with an underscore.** Do not change properties directly. Use getters and setters instead. Using getters and setters allowes you to react when a property has changed.
 
-## Use this main file-structure
+## Project file structure
 Every project has its unique requirements. So every projects is getting its unique file structure over time. It's a process that envolves over time. Do not [overthink your file structure](https://reactjs.org/docs/faq-structure.html) at the beginning. 
 
 The following file structure shows how a webfruits webapp could be organized:
@@ -42,10 +42,10 @@ src/
   - `ts` this shows you that, the app is build with TypeScript
   - ... create further folder if your app depends on it
 
-## Use this TypeScript file structure
+## File structure for `ts/`
 The file structure for your codebase follows the same paradigm like the main file structure. It shows in a quick way what you app is made of, without even read any kind of code.  
 
-### TypeScript files: `ts/`
+### `ts/`
 ```
 ts/
     app-name/
@@ -55,7 +55,7 @@ ts/
 - **`app-name/`** name this folder as your app is named. It contains the whole app logic.  
 Why using a app-folder? Because sometimes your project contains multiple apps. A common case is to have a `app-loader/` and a `app-main/`. In this case you have two index files like `index-loader.ts` and `index-main.ts`.
 
-### App: `ts/app-name/`
+### `ts/app-name/`
 ```
 app-name/
     config/
@@ -71,7 +71,7 @@ app-name/
 - **`AppNameMain.ts`** this is the place to initialize all core modules.
 - most likly there will be more folders depending on your app.
 
-### Core: `ts/app-name/core/`
+### `ts/app-name/core/`
 ```
 core/
     CoreView.ts
@@ -87,7 +87,7 @@ core/
 - `CoreController.ts` takes it all. It knows of all core modules which are relevant to communicate with each other. Basically this controlls your app.
 - see [skeleton-app](./skeleton-app) for further information of how a implementation of these classes can be done
 
-### Components: `ts/app-name/components/`
+### `ts/app-name/components/`
 ```
 components/
     typography/
@@ -114,7 +114,7 @@ This is just an example of how to structure you components. There is only one re
 - **Use a folder for every component**. Even when a component itself is made only from one file. If you need additional classes or subcomponents that a specific to one component, put it in the same folder.
 
 
-### Styles: `ts/app-name/style/`
+### `ts/app-name/style/`
 ```
 style/
     FontStyle.ts
@@ -124,50 +124,6 @@ style/
 ```
 All global styles should be implemented in specific classes with static getters or properties. The advantage of using  getters is, that the values can be calculated dynamically. For example the value for a headlines fontsize depends from the current width of the app.  
 Because in [webfruits/core](https://github.com/webfruits/core) styles are defined via TypeScript, this styles can be used across your whole codebase.
-
-### The whole file structure at once
-```
-ts/
-    [app-name]/
-        config/
-            AppConfig.ts
-        core/
-            CoreView.ts
-            CoreController.ts
-            CoreData.ts
-            CoreService.ts
-            CoreStore.ts
-            CoreSound.ts
-            CoreRouter.ts
-            ...
-        style/
-            FontStyle.ts
-            SizeStyle.ts
-            Color.ts
-            ...
-        components/
-            typography/
-                headline/
-                    Headline.ts
-                abstract/    
-                    Abstract.ts
-                paragraph/
-                    Paragraph.ts
-            content/        
-                teaser/
-                    TeaserModel.ts
-                    Teaser.ts
-                ...    
-            interface/
-                button/
-                    Button.ts
-                dropdown/
-                    Dropdown.ts
-                ...   
-            ...    
-        AppNameMain.ts
-    index.ts        
-```
 
 ### Example: SkeletonApp
 The [skeleton-app](./skeleton-app) demonstrates, how the structure could look like on a webapp that uses a service to catch the data for a gallery, which can be controlled by a navigation. It features only this kind of implementation that is needed to get the idea.
