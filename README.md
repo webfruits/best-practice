@@ -39,11 +39,11 @@ src/
   - `html/` html, pub, hbs or any other markup template. If you use hbs use `hbs/`instead
   - `libs/` some external non-npm-libraries
   - `scss/` css, scss, less or any other styling definitions. If you use less use `less/` instead
-  - `ts` this shows you that, the app is build with TypeScript
+  - `ts/` this shows you that, the app is build with TypeScript
   - ... create further folder if your app depends on it
 
 ## File structure for `ts/`
-The file structure for your codebase follows the same paradigm like the main file structure. It shows in a quick way what you app is made of, without even read any kind of code.  
+The file structure for your codebase follows the same paradigm like the main file structure. It shows in a quick way what your app is made of, without even read any kind of code.  
 
 ### `ts/`
 ```
